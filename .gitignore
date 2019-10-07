@@ -8,3 +8,5 @@ env.py
 *.pyc
 *.sqlite3
 **/migrations/*
+.coverage
+.vscode/
