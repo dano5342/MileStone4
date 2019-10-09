@@ -1,3 +1,22 @@
+/*Navbar*/
+.navbar-light {
+  background-color: silver !important; }
 
+.align-center {
+  align-content: center;
+  align-items: center;
+  justify-content: center; }
+
+.cart {
+  margin-left: auto; }
+
+/*  Body/Main  */
+/* Products */
+/* Profile */
+/* Cart */
+/* Checkout */
+/*  Footer  */
+/*  Webkits */
+/* Media Queries */
 
 /*# sourceMappingURL=main.css.map */
