@@ -11,3 +11,5 @@ env.py
 .coverage
 .vscode/
 stashed_items/*
+.sass-cache/*
+main.scss/*
