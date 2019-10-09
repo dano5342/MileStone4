@@ -19,6 +19,7 @@ from pages.urls import urlpatterns as pageviews
 from pages.views import home_view
 from products.views import all_products
 from users import views as user_views
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -27,5 +28,7 @@ urlpatterns = [
     path('pageviews/', include(pageviews)),
     path('products/', all_products, name="products"),
     path('register/', user_views.register, name="register"),
+    path('login/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
+    path('logout/', auth_views.LogoutView.as_view(template_name="logout.html"), name="logout"),
     
 ]
