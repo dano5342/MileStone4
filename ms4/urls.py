@@ -18,10 +18,14 @@ from django.urls import path, include
 from pages.urls import urlpatterns as pageviews
 from pages.views import home_view
 from products.views import all_products
+from users import views as user_views
+
 
 urlpatterns = [
     path('', home_view, name="home"),
     path('admin/', admin.site.urls),
     path('pageviews/', include(pageviews)),
-    path('products/', all_products, name="products")
+    path('products/', all_products, name="products"),
+    path('register/', user_views.register, name="register"),
+    
 ]

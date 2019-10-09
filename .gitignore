@@ -10,3 +10,4 @@ env.py
 **/migrations/*
 .coverage
 .vscode/
+stashed_items/*
