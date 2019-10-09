@@ -13,3 +13,4 @@ env.py
 stashed_items/*
 .sass-cache/*
 main.scss/*
+static/styles/.sass-cache/*
