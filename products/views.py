@@ -7,5 +7,8 @@ def all_products(request):
     arguments = {"products": products}
     return render(request, "products.html", arguments)
 
-
+def all_categories(request):
+    categories = Category.objects.all()
+    arguments = {'categories': categories}
+    return render(request, 'categories.html', arguments)
 

@@ -14,3 +14,4 @@ stashed_items/*
 .sass-cache/*
 main.scss/*
 static/styles/.sass-cache/*
+media/images/*
