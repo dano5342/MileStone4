@@ -2,13 +2,23 @@ from django.shortcuts import render
 from .models import Product, Category
 # Create your views here.
 
-def all_products(request):
-    products = Product.objects.all()
-    arguments = {"products": products}
-    return render(request, "products.html", arguments)
+
+def all_products(request, category_id=None):
+    """
+    Displays all products (in future with pagination, and 
+    category displays only displaying items within the category)
+    """
+
+    if not category_id:
+        products = Product.objects.all()
+    else:
+        products = Product.objects.filter(Category, category_id)
+    prod_args = {"products": products}
+    return render(request, "products.html", prod_args)
+
 
 def all_categories(request):
-    categories = Category.objects.all()
-    arguments = {'categories': categories}
-    return render(request, 'categories.html', arguments)
 
+    categories = Category.objects.all()
+    cat_args = {'categories': categories}
+    return render(request, 'categories.html', cat_args)

@@ -32,6 +32,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
     path('logout/', auth_views.LogoutView.as_view(template_name="logout.html"), name="logout"),
     path('profile/', user_views.profile, name="profile"),
-    path('prdoucts/', include(urls_products)),
+    path('products/<int:product_id>', include(urls_products)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
